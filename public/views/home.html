@@ -1,0 +1,27 @@
+<div class="container">
+<h2> Add an Employee</h2>
+<div class="form-group">
+  <input type="text" ng-model="firstName" placeholder="First name">
+</div>
+<div class="form-group">
+  <input type="text" ng-model="lastName" placeholder="Last name">
+</div>
+<div class="form-group">
+  <input type="text" ng-model="id" placeholder="Employee Id">
+</div>
+<div class="form-group">
+  <button ng-click="add()">Add</button>
+</div>
+<hr>
+  <table class="table">
+    <h2>Employee</h2>
+    <tr ng-repeat="p in employees">
+    <td>{{p.id}}</td>
+    <td><span>{{p.name.first}} {{p.name.last}}</span></td>
+    <td><button ng-click="$parent.remove(p)">Remove</button></td>
+    </tr>
+  </table>
+
+
+</div>
+
