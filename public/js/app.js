@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute'])
+var app = angular.module('app', ['ngRoute', 'ngResource'])
 
 app.run(['$rootScope', function($rootScope) {
    console.log("news app up and running")
