@@ -13,16 +13,16 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     templateUrl: '/views/home.html',
     controller: 'MainCtrl'
   })
-  .when('/employees', {
+  .when('/employees/:employeeId', {
     templateUrl: '/views/employees.html',
-    controller: 'MainCtrl'
+    controller: 'EmployeeCtrl'
   })
-  // .when('/about', {
-  //   templateUrl: '/views/about.html',
-  //   controller: 'StaticCtrl'
-  // })
-  // .otherwise({
-  //   templateUrl: '/views/404.html'
-  // })
+  .when('/about', {
+    templateUrl: '/views/about.html',
+    controller: 'StaticCtrl'
+  })
+  .otherwise({
+    templateUrl: '/views/404.html'
+  })
 
 }])

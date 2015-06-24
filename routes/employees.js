@@ -27,19 +27,19 @@ router.post('/', function(req,res, next) {
 
 })
 
-// router.get('/:employeeId', function(req, res, next) {
-//   Employee.findOne({
-//     id: req.params.employeeId
-//   }).populate('team').exec(function(error, results) {
-//     if (error) {
-//       next(error)
-//     }
-//     if (!results) {
-//       res.send(404)
-//     }
-//     res.json(results)
-//   })
-// })
+router.get('/:employeeId', function(req, res, next) {
+  Employee.findOne({
+    id: req.params.employeeId
+  }).exec(function(error, results) {
+    if (error) {
+      next(error)
+    }
+    if (!results) {
+      res.send(404)
+    }
+    res.json(results)
+  })
+})
 
 router.delete('/:employeeId', function(req, res, next) {
    Employee.remove({id: req.params.employeeId}, function(err) {

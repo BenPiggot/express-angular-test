@@ -16,8 +16,8 @@
   <table class="table">
     <h2>Employee</h2>
     <tr ng-repeat="p in employees">
-    <td>{{p.id}}</td>
-    <td><span>{{p.name.first}} {{p.name.last}}</span></td>
+<!--     <td>{{p.id}}</td>
+ -->    <td><a href="/employees/{{p.id}}"><span>{{p.name.first}} {{p.name.last}}</span></a></td>
     <td><button ng-click="$parent.remove(p)">Remove</button></td>
     </tr>
   </table>

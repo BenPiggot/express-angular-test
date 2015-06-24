@@ -15,7 +15,6 @@ app.controller('MainCtrl',['$scope', '$http', '$rootScope', 'EmployeeService',
   });
 
 
-console.log(EmployeeService.post)
   // $scope.add = function() {
   //   $http.post('/api/employees', {
   //     id: $scope.id,
@@ -27,6 +26,10 @@ console.log(EmployeeService.post)
   //       $scope.id = '';
   //   })
   // }
+
+
+
+
 
   $scope.add = function() {
     EmployeeService.post({
